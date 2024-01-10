@@ -136,8 +136,8 @@ Be sure to replace `<PRIVATE_KEY>` by the Wallet private key Variables that corr
 以下は、それにロードされたコントラクトへのリンクです: [Simple Storage contract](https://abi.ninja/0x94953A47a9385e4549Ca575c541937B38F4dd7a4/sepolia?functions=getNameFromNumber%2CgetNumberFromName%2CgetPersonAtIndex)
 
 左側の関数をクリックして、それらをページの中央に追加し、それらと対話します。
--「READ」カテゴリーの下にある関数は実際の値を取得するためのものです。
--「Write」カテゴリーの下にある関数は新しいデータを挿入するためのものです。
+- 「READ」カテゴリーの下にある関数は実際の値を取得するためのものです。
+- 「Write」カテゴリーの下にある関数は新しいデータを挿入するためのものです。
 
 - 注意: 上記のコントラクトは Sepolia テストネット上にデプロイされており、それと対話するにはテストネット用の資金が必要です。
 
