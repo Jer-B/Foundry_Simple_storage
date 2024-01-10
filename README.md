@@ -1,3 +1,4 @@
+# English README　[Jump to Japanese Version](#japanese)
 # Foundry Simple Storage
 
 Contract is deployed at 0x94953A47a9385e4549Ca575c541937B38F4dd7a4
@@ -5,6 +6,8 @@ Contract is deployed at 0x94953A47a9385e4549Ca575c541937B38F4dd7a4
 
 It is a simple contract used for storing number. And change the stored number anytime we want.
 It is a small contract but efficient for learning foundry basics and what a contract looks like.
+
+I used the 32 hours long video from Cyfrin Foundry Blockchain course to learn about Foundry.  
 
 # Getting Started
 
@@ -112,3 +115,112 @@ Or, you can use a deploy script!
 forge script script/DeploySimpleStorage.s.sol --private-key <PRIVATE_KEY> --rpc-url <ALCHEMY_URL>
 ```
 Be sure to replace `<PRIVATE_KEY>` by the Wallet private key Variables that correspond to the RPC you chose
+
+
+# 日本語版のREADME
+
+# Foundry Simple Storage
+
+このコントラクトは、0x94953A47a9385e4549Ca575c541937B38F4dd7a4 にデプロイされています。
+[Sepoliaで表示](https://sepolia.etherscan.io/address/0x94953a47a9385e4549ca575c541937b38f4dd7a4)
+
+これは数値を格納するためのシンプルなコントラクトです。そして、いつでも格納された数値を変更できます。
+これは小さなコントラクトですが、Foundryの基本やコントラクトの構造を学ぶのに効果的です。
+
+# 開始方法
+
+## 必要なもの
+
+- [ganache](https://trufflesuite.com/ganache/)
+  - アプリケーションを実行し、以下の画像を表示できれば成功です:
+    <br>
+    <img src="https://github.com/Cyfrin/foundry-simple-storage-f23/blob/main/img/ganache-picture.png" alt="ganache" width="200"/>
+  - 代替として [ganache-cli](https://www.npmjs.com/package/ganache-cli) または [hardhat](https://hardhat.org/) を使用できます。
+- [foundry](https://getfoundry.sh/) または foundry Anvil コマンド: Ganache が廃止されるか廃止される可能性があるためです。
+  - `forge --version` を実行して、次のようなレスポンスが表示されれば成功です: `forge 0.2.0 (816e00b 2024-01-16T00:05:26.396218Z)`
+
+初めて foundry をインストールする場合、`.bash_profile` または .zshrc に次のコードを追加できます。使用しているシェルに応じて、.bashrc または .zshrc に追加してください。
+現在使用しているシェルは、SHELL 環境変数の値を確認するか、現在のプロセス名を調べることで確認できます。ターミナルで次のコマンドを実行します:
+
+```bash
+echo $SHELL
+```
+
+そうすることで、使用しているシェルが bash か zsh かを確認できます。
+
+```bash
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+fi
+```
+zsh を使用している場合は、設定、エイリアス、および関数をホームディレクトリにある .zshrc ファイルに配置するようにしてください。ファイルが存在しない場合は、touch ~/.zshrc で作成できます。
+
+## 設定
+このリポジトリをクローンします
+
+```
+git clone https://github.com/Jer-B/Foundry_Simple_storage
+cd Foundry_Simple_storage
+```
+
+## 使用方法
+### Ganache を使用する場合
+1. ganache ローカルチェーンを実行して、ganache アプリケーションで quickstart をクリックします。
+
+> ワークスペースを保存します。これにより、次回 ganache を開いたときに作成したワークスペースを開始できます。それ以外の場合、以下の手順をすべて再度行う必要があります。
+
+2. アカウントの一つで鍵をクリックし、表示される鍵をコピーして、.env ファイルに配置します。.env.example に示されている内容と同様です。以下のようになります。
+
+PRIVATE_KEY_GANACHE=11ee3108a03081fe260ecdc106554d09d9d1209bcafd46942b10e02943effc4a
+
+### Anvil を使用する場合
+1. `.env.example` 内部にあるキーと RPC URL の情報を使用できます。
+
+2. ソースコードをコンパイルします
+
+```
+forge compile
+```
+
+3. コントラクトをデプロイします
+
+```
+forge create --private-key <PRIVATE_KEY>
+```
+RPC を選択した対応するウォレットプライベートキー変数で <PRIVATE_KEY> を置き換えてください
+
+## Windows、WSL、および Ganache を使用する場合
+WSL を使用している場合、ganache UI では別のエンドポイントを使用する必要があります。これを修正するためのオプションが 4 つあります。
+
+1. ganache UI で WSL エンドポイントを使用します（これは時々動作しないことがあります）
+2. `anvil` を使用します
+
+
+# テストネットへのデプロイ
+
+ [metamask](https://metamask.io/) または他のウォレットがあることを確認し、プライベートキーをエクスポートします。
+ 
+ **重要**
+ 
+リアルな資金が含まれていない Metamask を使用してください。誤ってプライベートキーを公共の場所に公開してしまう可能性があるためです。開発中には、別の Metamask またはウォレットを使用することを強くお勧めします。
+
+1. [プライベートキーをエクスポート](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) し、.env ファイルに配置します。上記のように行います。
+
+2. [Alchemy](https://alchemy.com/?a=673c802981) に移動し、選択したテストネットの新しいプロジェクトを作成します（たとえば Sepolia）。
+
+3. テストネットに関連する URL を取得し、.env ファイルに配置します。
+
+4. [テストネット ETH](https://faucets.chain.link/) をアカウントに持っていることを確認してください。[こちらから取得できます](こちらから取得できます)。アルケミーでプロジェクトを作成したテストネットと同じテストネット用のテストネット ETH を取得する必要があります（たとえば、Goerli）。
+
+5. 実行します
+
+```
+forge create --private-key <PRIVATE_KEY> --rpc-url <ALCHEMY_URL>
+```
+
+Or, you can use a deploy script!
+
+```
+forge script script/DeploySimpleStorage.s.sol --private-key <PRIVATE_KEY> --rpc-url <ALCHEMY_URL>
+```
+選択した RPC に対応するウォレットのプライベートキー変数で <PRIVATE_KEY> を置き換えてください。
