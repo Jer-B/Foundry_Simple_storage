@@ -112,4 +112,3 @@ Or, you can use a deploy script!
 forge script script/DeploySimpleStorage.s.sol --private-key <PRIVATE_KEY> --rpc-url <ALCHEMY_URL>
 ```
 Be sure to replace `<PRIVATE_KEY>` by the Wallet private key Variables that correspond to the RPC you chose
-
