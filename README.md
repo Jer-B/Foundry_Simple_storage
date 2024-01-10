@@ -33,9 +33,10 @@ And you'll see if you're using bash or zsh.
 if [ -f ~/.bashrc ]; then
     source ~/.bashrc
 fi
-``` -->
+```
 
-<!-- If you are using zsh, make sure to place your configurations, aliases, and functions in the .zshrc file located in your home directory. If the file doesn't exist, you can create it with touch ~/.zshrc. 
+
+If you are using zsh, make sure to place your configurations, aliases, and functions in the .zshrc file located in your home directory. If the file doesn't exist, you can create it with touch ~/.zshrc. 
 
 
 ## Setup
