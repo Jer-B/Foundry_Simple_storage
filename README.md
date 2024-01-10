@@ -8,6 +8,7 @@ It is a simple contract used for storing number. And change the stored number an
 It is a small contract but efficient for learning foundry basics and what a contract looks like.
 
 I used the 32 hours long video from Cyfrin Foundry Blockchain course to learn about Foundry.  
+[Cyfrin Foundry](https://github.com/Cyfrin/foundry-full-course-f23)
 
 # Getting Started
 
@@ -126,6 +127,9 @@ Be sure to replace `<PRIVATE_KEY>` by the Wallet private key Variables that corr
 
 これは数値を格納するためのシンプルなコントラクトです。そして、いつでも格納された数値を変更できます。
 これは小さなコントラクトですが、Foundryの基本やコントラクトの構造を学ぶのに効果的です。
+
+Foundryを学ぶために、Cyfrin Foundry Blockchainコースの32時間の長いビデオを使用しました。
+[Cyfrin Foundry](https://github.com/Cyfrin/foundry-full-course-f23)
 
 # 開始方法
 
