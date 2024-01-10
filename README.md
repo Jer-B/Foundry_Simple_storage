@@ -18,8 +18,7 @@ It is a small contract but efficient for learning foundry basics and what a cont
 - [foundry](https://getfoundry.sh/) or foundry Anvil command: `anvil` as Ganache could be deprecated or discontinued by the time.
   - You'll know you did it right if you can run `forge --version` and you see a response like `forge 0.2.0 (816e00b 2024-01-16T00:05:26.396218Z)`
 
-
-<!-- If you're installing foundry for the first time, you can put this in your `.bash_profile` or `.zshrc` depending on if you're using bash or zsh shell.
+If you're installing foundry for the first time, you can put this in your `.bash_profile` or `.zshrc` depending on if you're using bash or zsh shell.
 
 You can check which shell you are currently using by looking at the value of the SHELL environment variable or examining the current process name. Run the following command in your terminal:
 
